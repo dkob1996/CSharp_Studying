@@ -12,3 +12,17 @@ else
 {
         Console.WriteLine("нет");
 }
+
+//Второе решение задачи
+// Console.Write("Enter first num ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Enter second num ");
+// int num2 = Convert.ToInt32(Console.ReadLine());
+// if((Math.Pow(num1, 2)==num2)|(Math.Pow(num2, 2)==num1)) 
+// {
+//    Console.WriteLine("One number is the square of the second ");
+// }
+// else
+// {
+//    Console.WriteLine("One number is not the square of the second ");
+// }
