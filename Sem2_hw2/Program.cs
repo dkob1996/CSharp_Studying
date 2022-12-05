@@ -3,6 +3,7 @@
 //78 -> третьей цифры нет
 //32679 -> 6
 
+Console.WriteLine("Ввелите число для определения третей цифры");
 int randomNumber = int.Parse(Console.ReadLine());
 int result = 0;               
 
