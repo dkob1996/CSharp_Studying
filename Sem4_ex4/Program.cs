@@ -14,7 +14,7 @@ void PrintArray(int[] arr)
     Console.Write(array[arr.Length - 1]);
     Console.Write("]");
 }
-
+ 
 int[] RandomZeroOne(int number)
 {
     int[] array = new int[number];

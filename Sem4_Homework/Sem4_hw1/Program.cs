@@ -2,18 +2,35 @@
 //3, 5 -> 243 (3⁵)
 //2, 4 -> 16
 
-int number = EnterNumber("Введите число: ");
+int number1 = EnterNumber("Введите число: ");
+int number2 = EnterNumber("Введите степень числа: ");
 
-Console.WriteLine(MultipleNumbers(number));
+Console.WriteLine(MultipleNumbers(number1, number2));
 
-int MultipleNumbers(int num)
+double MultipleNumbers(int number1, int number2)
 {
-    int mult = 1;
-    for (int i = 1; i <= num; i++)
+    double result = 1;
+    if (number2 > 0)
     {
-        mult = mult * i;
+        for (int i = 1; i <= number2; i++)
+        {
+            result = result * number1;
+        }
+        return result;
     }
-    return mult;
+    if (number2 == 0)
+    {
+        result = 1;
+    }
+    if (number2 < 0)
+    {
+        for (int i = 1; i <= Math.Abs(number2); i++)
+        {
+            result = result / number1;
+        }
+        return result;
+    }
+    return result;
 }
 
 int EnterNumber(string text)
