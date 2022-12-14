@@ -4,8 +4,10 @@
 // положительных элементов массива.
 // Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] 
 // сумма положительных чисел равна 29, сумма отрицательных равна -20.
-int[] array = CreateRandomArray(4, -9, 9);
-PrintArray(array, "Random Array");
+
+
+//int[] array = CreateRandomArray(4, -9, 9);
+//PrintArray(array, "Random Array");
 
 // 1 Вариант
 //int sumPositive = GetSumPositiveNumbers(array);
@@ -35,6 +37,7 @@ int[] GetSumPositiveAndSumNagativeNumbers(int[] array)
 }*/
 
 // Вариант 3
+/*
 (int,int) sumPositiveAndNagative = GetSumPositiveAndSumNagativeNumbers(array);
 Console.WriteLine(sumPositiveAndNagative.Item1);
 Console.WriteLine(sumPositiveAndNagative.Item2);
@@ -58,7 +61,7 @@ Console.WriteLine(sumPositiveAndNagative.Item2);
 
     return ( sumPositive, sumNegative);
 }
-
+*/
 // 4 Вариант (плохой)
 //string result = GetSumPositiveAndSumNagativeNumbers(array);
 //Console.WriteLine(result);
@@ -81,6 +84,8 @@ Console.WriteLine(sumPositiveAndNagative.Item2);
     return $"{sumPositive}, {sumNegative}";
 }*/
 
+
+/*
 int GetSumPositiveNumbers(int[] array)
 {
     int sum = 0;
@@ -133,3 +138,5 @@ void PrintArray(int[] array, string message)
     string str = string.Join(", ", array);
     Console.WriteLine($"{message} - [ {str} ]");
 }
+
+*/
