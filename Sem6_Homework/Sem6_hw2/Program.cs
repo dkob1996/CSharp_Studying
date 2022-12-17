@@ -20,15 +20,15 @@ double k2 = EnterNumber("Введите число k2: ");
 
 (double, double, bool, bool) FindComasOfCrossroad(double b1, double k1, double b2, double k2)   //метод по поиску пересечений
 {
-    double findx = 0;
-    double findy = 0;
+    double findX = 0;
+    double findY = 0;
     bool cross = true;
     bool parallel = false;
 
     if (k1 != k2)
     {
-        findx = (b2 - b1) / (k1 - k2);
-        findy = (b1 * k2 - b2 * k1) / (k2 - k1);
+        findX = (b2 - b1) / (k1 - k2);
+        findY = (b1 * k2 - b2 * k1) / (k2 - k1);
         cross = true;
     }
     if ((k1 == k2) && (b1 != b2))
@@ -39,7 +39,7 @@ double k2 = EnterNumber("Введите число k2: ");
     {
         parallel = true;
     }
-    return (findx, findy, cross, parallel);
+    return (findX, findY, cross, parallel);
 
 }
 
