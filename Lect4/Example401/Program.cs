@@ -20,28 +20,28 @@ Console.WriteLine($"-{table[rows, cols]}-");
 
 void PrintArray(int[,] matr)
 {
-for (int i=0; i<matr.GetLength(0); i++ )
-{
-    for (int j=0; j<matr.GetLength(1); j++)
+    for (int i = 0; i < matr.GetLength(0); i++)
     {
-        Console.Write($"{matr[i, j]} ");
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            Console.Write($"{matr[i, j]} ");
+        }
+        Console.WriteLine();
     }
-    Console.WriteLine();
-}
 }
 
 void FillArray(int[,] matr)
 {
-    for(int i=0; i<matr.GetLength(0); i++)
+    for (int i = 0; i < matr.GetLength(0); i++)
     {
-        for (int j=0; j<matr.GetLength(1); j++)
+        for (int j = 0; j < matr.GetLength(1); j++)
         {
-            matr[i,j] = new Random().Next(1,10); //[1;10)
+            matr[i, j] = new Random().Next(1, 10); //[1;10)
         }
     }
 }
 
-int[,] matrix = new int[3,4];
+int[,] matrix = new int[3, 4];
 PrintArray(matrix);
 Console.WriteLine();
 FillArray(matrix);
