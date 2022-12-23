@@ -10,6 +10,7 @@
 17 -> такого числа в массиве нет
 */
 
+// /*
 try
 {
     int m = ReadInt("Введите m:");
@@ -17,7 +18,7 @@ try
     int number = ReadInt("Введите позицию элемента в массиве:");
     int[,] array = Create2DArray(m, n);
     Print2DArray(array);
-    int result = FindNumberInArray(array, number);
+    (int, int, int) result = FindNumberInArray(array, number);
     PrintAnswer(result, number);
 }
 catch (Exception ex)
@@ -67,26 +68,189 @@ int ReadInt(string title)
     throw new Exception("Введены не корректные символы");
 }
 
-int FindNumberInArray(int[,] array, int number)
+(int, int, int) FindNumberInArray(int[,] array, int number)
 {
+    int ind1 = -1;
+    int ind2 = -1;
     int result = 0;
     if (number < array.Length)
     {
-        if (number < array.GetLength(0))
+        if ((array.GetLength(1) % 2 == 0) && (array.GetLength(0) % 2 == 0))   //[чет,чет]
         {
-            result = array[0, number];
+            if (number < array.GetLength(0))
+            {
+                result = array[0, number];
+                ind1 = 0;
+                ind2 = number;
+            }
+            if (number % array.GetLength(0) == 0)
+            {
+                ind1 = number / array.GetLength(0);
+                ind2 = 0;
+                result = array[ind1, ind2];
+            }
+            if ((number % array.GetLength(0) != 0) && (number - array.GetLength(1) >= 1))
+            {
+                ind1 = number / array.GetLength(0);
+                ind2 = number - (array.GetLength(1) * (number / array.GetLength(0)));
+                result = array[ind1, ind2];
+            }
         }
-        else
+        if ((array.GetLength(1) % 2 != 0) && (array.GetLength(0) % 2 == 0))    //[чет,нечет]
         {
-            result = array[number % array.GetLength(0), 0];  //проблема с условием
+            if (number < array.GetLength(1))
+            {
+                result = array[0, number];
+                ind1 = 0;
+                ind2 = number;
+            }
+            if (number % array.GetLength(1) == 0)
+            {
+                ind1 = number / array.GetLength(1);
+                ind2 = 0;
+                result = array[ind1, ind2];
+            }
+            if ((number % array.GetLength(0) != 0) && (number - array.GetLength(1) >= 1))
+            {
+                ind1 = number / array.GetLength(1);
+                ind2 = number - (array.GetLength(1) * (number / array.GetLength(1)));
+                result = array[ind1, ind2];
+            }
         }
+
+        if ((array.GetLength(1) % 2 == 0) && (array.GetLength(0) % 2 != 0))  // [нечет,чет]
+        {
+            if (number < array.GetLength(1))
+            {
+                result = array[0, number];
+                ind1 = 0;
+                ind2 = number;
+            }
+            if (number % array.GetLength(1) == 0)
+            {
+                ind1 = number / array.GetLength(0);
+                ind2 = 0;
+                result = array[ind1, ind2];
+            }
+            if ((number % array.GetLength(1) != 0) && (number - array.GetLength(1) >= 1))
+            {
+                ind1 = number / array.GetLength(1);
+                ind2 = number - (array.GetLength(1) * (number / array.GetLength(1)));
+                result = array[ind1, ind2];
+            }
+        }
+
+        if ((array.GetLength(1) % 2 != 0) && (array.GetLength(0) % 2 != 0))  // [нечет,нечет]
+        {
+            if (number < array.GetLength(1))
+            {
+                result = array[0, number];
+                ind1 = 0;
+                ind2 = number;
+            }
+            if (number % array.GetLength(1) == 0)
+            {
+                ind1 = number / array.GetLength(0);
+                ind2 = 0;
+                result = array[ind1, ind2];
+            }
+            if ((number % array.GetLength(1) != 0) && (number - array.GetLength(1) >= 1))
+            {
+                ind1 = number / array.GetLength(1);
+                ind2 = number - (array.GetLength(1) * (number / array.GetLength(1)));
+                result = array[ind1, ind2];
+            }
+        }
+
     }
     else result = -1;
-    return result;
+    return (result, ind1, ind2);
 }
-//number - array.GetLength(1)
-void PrintAnswer(int result, int number)
+
+void PrintAnswer((int, int, int) result, int number)
 {
-    if (result != -1) Console.WriteLine($"Элемент под номером {number} есть и он = {result}.");
+    if (result.Item1 != -1) Console.WriteLine($"Элемент под номером {number}, в массиве [{result.Item2},{result.Item3}] есть, и он = {result.Item1}.");
     else Console.WriteLine($"Элемента под номером {number} в массиве нет!");
 }
+
+// */  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+// Блок проверки условий (для четного массива)
+Console.WriteLine("Напишите номер числа:");
+int number = int.Parse(Console.ReadLine());
+Console.WriteLine("Напишите номер array.GetLength(0):");
+int gl0 = int.Parse(Console.ReadLine());
+Console.WriteLine("Напишите номер array.GetLength(1):");
+int gl1 = int.Parse(Console.ReadLine());
+
+int result0 = number % gl0;
+Console.WriteLine($"number % array.GetLength(0):{result0}");
+
+int result1 = number / gl0;
+Console.WriteLine($"number / array.GetLength(0):{result1}");
+
+int result2 = gl1 * (number / gl0);
+Console.WriteLine($"array.GetLength(1) * (number / array.GetLength(0)):{result2}");
+
+int result3 = number - (gl1 * (number / gl0));
+Console.WriteLine($"number - (array.GetLength(1) * (number / array.GetLength(0)):{result3}");
+
+//result = array[number % array.GetLength(0), number - (array.GetLength(1) * (number / array.GetLength(0)))];
+
+int ind1 = number / gl0;
+Console.WriteLine($"Стобец:{ind1}");
+
+int ind2 = number - (gl1 * (number / gl0));
+Console.WriteLine($"Строка:{ind2}");
+
+*/
+/*
+// Блок проверки условий  (для нечетного массива)
+Console.WriteLine("Напишите номер числа:");
+int number = int.Parse(Console.ReadLine());
+Console.WriteLine("Напишите номер array.GetLength(0):");
+int gl0 = int.Parse(Console.ReadLine());
+Console.WriteLine("Напишите номер array.GetLength(1):");
+int gl1 = int.Parse(Console.ReadLine());
+
+int result0 = number / gl1;
+Console.WriteLine($"number / array.GetLength(1):{result0}");
+
+int result1 = number / gl1;
+Console.WriteLine($"number / array.GetLength(1):{result1}");
+
+int result2 = gl1 * (number / gl1);
+Console.WriteLine($"array.GetLength(1) * (number / array.GetLength(1)):{result2}");
+
+int result3 = number - (gl1 * (number / gl1));
+Console.WriteLine($"number - (array.GetLength(1) * (number / array.GetLength(1)):{result3}");
+
+//result = array[number / array.GetLength(1), number - (array.GetLength(1) * (number / array.GetLength(1)))];
+
+int ind1 = number / gl1;
+Console.WriteLine($"Стобец:{ind1}");
+
+int ind2 = number - (gl1 * (number / gl1));
+Console.WriteLine($"Строка:{ind2}");
+
+*/

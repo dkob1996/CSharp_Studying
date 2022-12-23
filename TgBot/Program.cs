@@ -1,4 +1,4 @@
 ﻿using Telegram.Bot;
 using Telegram.Bot.Types;
 
-TelegramBotClient client = new TelegramBotClient();
+//TelegramBotClient client = new TelegramBotClient();
