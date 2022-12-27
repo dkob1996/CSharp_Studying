@@ -75,7 +75,7 @@ double[] FindAverageInColumns(int[,] array)
         {
             result[j] = result[j] + array[i, j];
         }
-        mass[j] += result[j] / 4;
+        mass[j] += result[j] / array.GetLength(0);
     }
     return mass;
 }
