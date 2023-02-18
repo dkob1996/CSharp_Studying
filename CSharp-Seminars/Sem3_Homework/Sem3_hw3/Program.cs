@@ -1,10 +1,10 @@
-﻿//Задача 23
-//Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+﻿//Task 23
+//Write a program that takes a number (N) as input and outputs a table of cubes of numbers from 1 to N.
 
 //3 -> 1, 8, 27
 //5 -> 1, 8, 27, 64, 125
 
-Console.WriteLine("Введите число N");
+Console.WriteLine("Enter number N");
 int num = int.Parse(Console.ReadLine());
 int[] abc = GetCalcTriangles(num);
 

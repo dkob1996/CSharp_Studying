@@ -1,16 +1,16 @@
-﻿//Задача 19
-//Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
-//14212 -> нет
-//12821 -> да
-//23432 -> да
+﻿//Task 19
+//Write a program that accepts a five-digit number as input and checks whether it is a palindrome.
+//14212 -> no
+//12821 -> yes
+//23432 -> yes
 
-Console.WriteLine("Введите пятизначное число");
+Console.WriteLine("Enter a five-digit number");
 
-int numbers = int.Parse(Console.ReadLine());         //Вводим число с клавиатуры
+int numbers = int.Parse(Console.ReadLine());         //Enter a number from the keyboard
 
-if (numbers >= 10000 && numbers < 100000)            //Проверка на то что число пятизначное
+if (numbers >= 10000 && numbers < 100000)            //Checking that the number is five-digit
 {
-    string str = numbers.ToString();                 //Блок преобразования введенного числа в массив "arr"
+    string str = numbers.ToString();                 //The block for converting the entered number into an array "arr"
     int[] arr = new int[str.Length];
     for (int i = 0; i < str.Length; i++)
     {
@@ -18,31 +18,31 @@ if (numbers >= 10000 && numbers < 100000)            //Проверка на т�
 
     }
 
-    int[] mass2 = new int[str.Length];               //Задаем новый массив "mass2"
+    int[] mass2 = new int[str.Length];               //Setting a new array "mass2"
     int j = arr.Length - 1;
 
-    for (int i = 0; i < arr.Length; i++)             //Цикл с перезаписью массива "arr" в "mass2" наоборот
+    for (int i = 0; i < arr.Length; i++)             //A loop with overwriting the array "arr" in "mass2" vice versa
     {
         mass2[j] = arr[i];
         j = j - 1;
     }
 
-    int numbers2 = 0;                               //Преобразования массива "mass2" в число "numbers2"
+    int numbers2 = 0;                               //Converting the array "mass2" to the number "numbers 2"
     for (int i = 0; i < arr.Length; i++)
     {
         numbers2 = 10 * numbers2 + mass2[i];
     }
 
-    if (numbers2 == numbers)                        //Сравниваем введенное число "numbers" и полученное число "numbers2"
+    if (numbers2 == numbers)                        //Compare the entered number "numbers" and the resulting number "numbers 2"
     {
-        Console.WriteLine("Да! Палиндром!");
+        Console.WriteLine("Yes! Palindrome!");
     }
     else
     {
-        Console.WriteLine("Нет( Не палиндром");
+        Console.WriteLine("No (Not a palindrome");
     }
 }
-else                                                         //ответ если число не пятизначное
+else                                                         //answer if the number is not five-digit
 {
-    Console.WriteLine("Введите только пятизначное число");
+    Console.WriteLine("Enter only a five-digit number");
 }
