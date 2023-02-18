@@ -1,24 +1,24 @@
-﻿//Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+﻿//Task 15: Write a program that accepts a digit indicating the day of the week as input and checks whether this day is a weekend.
 //
-//6 -> да
-//7 -> да
-//1 -> нет
+//6 - > yes
+//7 -> yes
+//1 -> no
 
-Console.WriteLine("Ввелите число дня недели, для проверки выходной ли он");
+Console.WriteLine("Enter the number of the day of the week to check if it is a day off");
 int day = int.Parse(Console.ReadLine());
 
 if ((day >0) && (day < 8))
 {
     if (day < 6)
     {
-        Console.WriteLine("Нет");
+        Console.WriteLine("No");
     }
     else
     {
-        Console.WriteLine("Да");
+        Console.WriteLine("Yes");
     }
 }
 else
 {
-    Console.WriteLine("Введите корректное число дня недели");
+    Console.WriteLine("Enter the correct number of the day of the week");
 }

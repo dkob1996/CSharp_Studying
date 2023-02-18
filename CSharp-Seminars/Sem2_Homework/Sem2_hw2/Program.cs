@@ -1,9 +1,9 @@
-﻿//Задача 13:Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет. Не использовать string[]
+﻿//Task 13:Write a program that outputs the third digit of a given number or reports that there is no third digit. Don't use string[]
 //645 -> 5
-//78 -> третьей цифры нет
+//78 -> there is no third digit
 //32679 -> 6
 
-Console.WriteLine("Ввелите число для определения третей цифры");
+Console.WriteLine("Enter a number to determine the third digit");
 int randomNumber = int.Parse(Console.ReadLine());
 int result = 0;               
 
@@ -20,5 +20,5 @@ if (randomNumber >=100)
 }
 else
 {
-    Console.WriteLine("третьей цифры нет");
+    Console.WriteLine("there is no third digit");
 }

@@ -1,5 +1,5 @@
-﻿// 9. Напишите программу, которая выводит случайное число 
-// из отрезка [10, 99] и показывает наибольшую цифру числа.
+﻿// 9. Write a program that outputs a random number
+// from the segment [10, 99] and shows the largest digit of the number.
 // 78 -> 8 12-> 2 85 -> 8
 
 Random random = new Random();
