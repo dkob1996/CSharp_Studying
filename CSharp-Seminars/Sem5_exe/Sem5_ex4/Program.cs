@@ -1,13 +1,13 @@
 ﻿/*
-Задача 35: Задайте одномерный массив из 123 случайных чисел.
-Найдите количество элементов массива, значения которых лежат в
-отрезке [10,99].
-Пример для массива из 5, а не 123 элементов. В своём решении сделайте для 123
+Task 35: Set a one-dimensional array of 123 random numbers.
+Find the number of array elements whose values lie in
+the segment [10,99].
+Example for an array of 5, not 123 elements. In your solution, do for 123
 [5, 18, 123, 6, 2] -> 1
 [1, 2, 3, 6, 2] -> 0
 [10, 11, 12, 13, 14] -> 5
 */
-Console.WriteLine("Количество элементов со значениями от [10,99]:");
+Console.WriteLine("Number of elements with values from [10,99]:");
 int[] array = RandomZeroOne(123);
 
 PrintArray(array);

@@ -1,22 +1,22 @@
-﻿// Демонстрация решения
-// Задача 31: Задайте массив из 12 элементов, заполненный случайными 
-// числами из промежутка [-9, 9]. Найдите сумму отрицательных и 
-// положительных элементов массива.
-// Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] 
-// сумма положительных чисел равна 29, сумма отрицательных равна -20.
+﻿// Demonstration of the solution
+// Task 31: Specify an array of 12 elements filled with random
+// numbers from the interval [-9, 9]. Find the sum of the negative and
+// positive elements of the array.
+// For example, in the array [3,9,-8,1,0,-7,2,-1,8,-3,-1,6]
+// the sum of positive numbers is 29, the sum of negative numbers is -20.
 
 
 //int[] array = CreateRandomArray(4, -9, 9);
 //PrintArray(array, "Random Array");
 
-// 1 Вариант
+// 1 Variant
 //int sumPositive = GetSumPositiveNumbers(array);
 //Console.WriteLine(sumPositive);
 
 //int sumNegative = GetSumNegativeNumbers(array);
 //Console.WriteLine(sumNegative);
 
-//2 Вариант
+//2 Variant
 /*int[] sumNegativeAndPositive = GetSumPositiveAndSumNagativeNumbers(array);
 PrintArray(sumNegativeAndPositive, "Sum Positive and Negative");
 int[] GetSumPositiveAndSumNagativeNumbers(int[] array)
@@ -36,7 +36,7 @@ int[] GetSumPositiveAndSumNagativeNumbers(int[] array)
     return sumNegativeAndPositive;
 }*/
 
-// Вариант 3
+// Variant 3
 /*
 (int,int) sumPositiveAndNagative = GetSumPositiveAndSumNagativeNumbers(array);
 Console.WriteLine(sumPositiveAndNagative.Item1);
@@ -62,7 +62,7 @@ Console.WriteLine(sumPositiveAndNagative.Item2);
     return ( sumPositive, sumNegative);
 }
 */
-// 4 Вариант (плохой)
+// 4 Variant (bad)
 //string result = GetSumPositiveAndSumNagativeNumbers(array);
 //Console.WriteLine(result);
 

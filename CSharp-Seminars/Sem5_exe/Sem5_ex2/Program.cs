@@ -1,8 +1,8 @@
-﻿//Задача 32: Напишите программу замена элементов массива: 
-//положительные элементы замените на соответствующие отрицательные, и наоборот.
+﻿//Task 32: Write a program replacing array elements:
+// replace the positive elements with the corresponding negative ones, and vice versa.
 //[-4, -8, 8, 2] -> [4, 8, -8, -2]
 
-Console.WriteLine("Введите количество элементов массива");
+Console.WriteLine("Enter count elements of massive");
 int ElementCount = int.Parse(Console.ReadLine());
 
 int[] array2 = CreateMassive(ElementCount);
@@ -26,7 +26,7 @@ int[] CreateMassive(int number)
 {
     int[] array2 = new int[number];
     int[] array = new int[number];
-    Console.WriteLine("Введите подряд через Enter элементы массива");
+    Console.WriteLine("Enter the array elements in a row via Enter");
     for (int i = 0; i < array.Length; i++)
     {
         array[i] = int.Parse(Console.ReadLine());

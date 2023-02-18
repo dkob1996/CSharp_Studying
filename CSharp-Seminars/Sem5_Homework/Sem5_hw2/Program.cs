@@ -1,10 +1,10 @@
-﻿//Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+﻿//Task 36: Set a one-dimensional array filled with random numbers. Find the sum of the elements standing in odd positions.
 //[3, 7, 23, 12] -> 19
 //[-4, -6, 89, 6] -> 0
 
 
 
-Console.WriteLine("Введите кол-во элементов в массиве");
+Console.WriteLine("Enter count elements in massive");
 int NumbersOfElements = int.Parse(Console.ReadLine());
 
 int[] array = RandomZeroOne(NumbersOfElements);
@@ -25,12 +25,12 @@ int SumOfNumbers(int[] array)
 }
 
 int SumNumb = SumOfNumbers(array);
-Console.WriteLine($"Сумма элементов стоящих на нечетных позициях :{SumNumb}");
+Console.WriteLine($"The sum of the elements standing in odd positions :{SumNumb}");
 
 
 void PrintArray(int[] arr)
 {
-    Console.WriteLine("Массив случайных чисел");
+    Console.WriteLine("Array of random numbers");
     Console.Write("[");
     for (var i = 0; i < arr.Length - 1; i++)
     {

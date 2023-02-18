@@ -1,11 +1,11 @@
 ﻿/*
-Задача 37: Найдите произведение пар чисел в одномерном массиве. 
-Парой считаем первый и последний элемент, второй и предпоследний
-и т.д. Результат запишите в новом массиве. [1 2 3 4 5] -> 5 8 3
+Task 37: Find the product of pairs of numbers in a one-dimensional array. 
+We consider the first and last element as a pair, the second and penultimate
+, etc. Write the result in a new array. [1 2 3 4 5] -> 5 8 3
 [6 7 3 6] -> 36 21
 */
 
-Console.WriteLine("Введите кол-во элементов в массиве");
+Console.WriteLine("Enter count elements in massive");
 int NumbersOfElements = int.Parse(Console.ReadLine());
 
 int[] array = RandomZeroOne(NumbersOfElements);
@@ -50,7 +50,7 @@ PrintSum(SumMassive);
 
 void PrintSum(int[] arr)
 {
-    Console.WriteLine("Массив суммы чисел");
+    Console.WriteLine("Array of sum of numbers");
     Console.Write("[");
     for (var i = 0; i < arr.Length - 1; i++)
     {
@@ -64,7 +64,7 @@ void PrintSum(int[] arr)
 
 void PrintArray(int[] arr)
 {
-    Console.WriteLine("Массив случайных чисел");
+    Console.WriteLine("Array of random numbers");
     Console.Write("[");
     for (var i = 0; i < arr.Length - 1; i++)
     {

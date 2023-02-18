@@ -1,9 +1,9 @@
-﻿//Задача 33: Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
-//4; массив [6, 7, 19, 345, 3] -> нет
-//3; массив [6, 7, 19, 345, 3] -> да
+﻿//Task 33: Specify an array. Write a program that determines whether a given number is present in an array.
+//4; array [6, 7, 19, 345, 3] -> no
+//3; array [6, 7, 19, 345, 3] -> yes
 
 int[] array = RandomZeroOne(5);
-Console.WriteLine("Введите значение необходимого числа");
+Console.WriteLine("Enter the value of the required number");
 int NumberFromKey = int.Parse(Console.ReadLine());
 
 PrintArray(array);
@@ -33,11 +33,11 @@ void PrintMessage(int result)
 {
     if (result > 0)
     {
-        Console.WriteLine("Такое число есть");
+        Console.WriteLine("There is such a number");
     }
     else
     {
-        Console.WriteLine("Такого числа нет");
+        Console.WriteLine("There is no such number");
     }
 }
 

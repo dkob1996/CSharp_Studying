@@ -1,18 +1,18 @@
 ﻿/*
-Задача 38: Задайте массив вещественных чисел. 
-Найдите разницу между максимальным и минимальным элементов массива.
+Task 38: Specify an array of real numbers.
+Find the difference between the maximum and minimum array elements.
 [3 7 22 2 78] -> 76
 */
 
 
 
-Console.WriteLine("Введите кол-во элементов в массиве");
+Console.WriteLine("Enter count of elements in massive");
 int NumbersOfElements = int.Parse(Console.ReadLine());
 
 double[] array = RandomZeroOne(NumbersOfElements);
 PrintArray(array);
 
-(double, double) FindMaxAndMin(double[] array)           //Поиск макс и мин
+(double, double) FindMaxAndMin(double[] array)           //Finding max and min
 {
     double MaxElem = array[0];
     double MinElem = array[0];
@@ -36,12 +36,12 @@ PrintArray(array);
 
 (double, double) MaxAndMinElements = FindMaxAndMin(array);
 
-Console.Write("Максимальный элемент массива:");
+Console.Write("Max element in massive:");
 Console.WriteLine(MaxAndMinElements.Item1);
-Console.Write("Минимальный элемент массива:");
+Console.Write("Min element in massive:");
 Console.WriteLine(MaxAndMinElements.Item2);
 
-Console.Write("Разница между максимальным и минимальным элементами массива:");
+Console.Write("The difference between the maximum and minimum array elements:");
 double result = 0;
 if (MaxAndMinElements.Item2 < 0 && MaxAndMinElements.Item1 < 0)
 {
@@ -60,7 +60,7 @@ Console.WriteLine(result);
 
 void PrintArray(double[] arr)
 {
-    Console.WriteLine("Массив случайных чисел:");
+    Console.WriteLine("Array of random numbers:");
     Console.Write("[");
     for (var i = 0; i < arr.Length - 1; i++)
     {

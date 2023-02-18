@@ -1,9 +1,9 @@
-﻿//Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
-//Напишите программу, которая покажет количество чётных чисел в массиве.
+﻿//Task 34: Specify an array filled with random positive three-digit numbers. 
+//Write a program that will show the number of even numbers in the array.
 //[345, 897, 568, 234] -> 2
 
 
-Console.WriteLine("Введите кол-во элементов в массиве");
+Console.WriteLine("Enter count of elements in massive");
 int NumbersOfElements = int.Parse(Console.ReadLine());
 
 int[] array = RandomZeroOne(NumbersOfElements);
@@ -24,12 +24,12 @@ int CountOfNumbers(int[] array)
 }
 
 int CountNumb = CountOfNumbers(array);
-Console.WriteLine($"Количество четных чисел в массиве :{CountNumb}");
+Console.WriteLine($"The number of even numbers in the array :{CountNumb}");
 
 
 void PrintArray(int[] arr)
 {
-    Console.WriteLine("Массив случайных чисел");
+    Console.WriteLine("Array of random numbers");
     Console.Write("[");
     for (var i = 0; i < arr.Length - 1; i++)
     {
