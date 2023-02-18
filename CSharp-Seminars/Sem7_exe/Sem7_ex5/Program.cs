@@ -1,12 +1,12 @@
 ﻿/*
-Задача 53: Задайте двумерный массив. Напишите программу, которая поменяет местами первую и последнюю строку массива.
+Task 53: Define a two-dimensional array. Write a program that will swap the first and last row of the array.
 */
 
 
 try
 {
-    int m = ReadInt("Введите m");
-    int n = ReadInt("Введите n");
+    int m = ReadInt("Enter m");
+    int n = ReadInt("Enter n");
     int[,] array = Create2DArray(m, n);
     Print2DArray(array);
     Console.WriteLine();
@@ -58,7 +58,7 @@ int ReadInt(string title)
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }
 
 void Reparir2DArray(int[,] array)

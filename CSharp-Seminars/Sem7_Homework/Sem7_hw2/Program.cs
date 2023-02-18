@@ -1,21 +1,21 @@
 ﻿/*
-Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, 
-и возвращает значение этого элемента или же указание, что такого элемента нет.
+Task 50. Write a program that accepts the positions of an element in a two-dimensional array as input,
+and returns the value of this element or an indication that there is no such element.
 
-Например, задан массив:
+For example, an array is given:
 
 1 4 7 2
 5 9 2 3
 8 4 2 4
-17 -> такого числа в массиве нет
+17 -> there is no such number in the array
 */
 
 // /*
 try
 {
-    int m = ReadInt("Введите m:");
-    int n = ReadInt("Введите n:");
-    int number = ReadInt("Введите позицию элемента в массиве:");
+    int m = ReadInt("Enter m:");
+    int n = ReadInt("Enter n:");
+    int number = ReadInt("Enter the position of the element in the array:");
     int[,] array = Create2DArray(m, n);
     Print2DArray(array);
     (int, int, int) result = FindNumberInArray(array, number);
@@ -65,7 +65,7 @@ int ReadInt(string title)
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }
 
 (int, int, int) FindNumberInArray(int[,] array, int number)
@@ -75,7 +75,7 @@ int ReadInt(string title)
     int result = 0;
     if (number < array.Length)
     {
-        if ((array.GetLength(1) % 2 == 0) && (array.GetLength(0) % 2 == 0))   //[чет,чет]
+        if ((array.GetLength(1) % 2 == 0) && (array.GetLength(0) % 2 == 0))   //[even, even]
         {
             if (number < array.GetLength(0))
             {
@@ -96,7 +96,7 @@ int ReadInt(string title)
                 result = array[ind1, ind2];
             }
         }
-        if ((array.GetLength(1) % 2 != 0) && (array.GetLength(0) % 2 == 0))    //[чет,нечет]
+        if ((array.GetLength(1) % 2 != 0) && (array.GetLength(0) % 2 == 0))    //[even,odd]
         {
             if (number < array.GetLength(1))
             {
@@ -118,7 +118,7 @@ int ReadInt(string title)
             }
         }
 
-        if ((array.GetLength(1) % 2 == 0) && (array.GetLength(0) % 2 != 0))  // [нечет,чет]
+        if ((array.GetLength(1) % 2 == 0) && (array.GetLength(0) % 2 != 0))  // [odd,even]
         {
             if (number < array.GetLength(1))
             {
@@ -140,7 +140,7 @@ int ReadInt(string title)
             }
         }
 
-        if ((array.GetLength(1) % 2 != 0) && (array.GetLength(0) % 2 != 0))  // [нечет,нечет]
+        if ((array.GetLength(1) % 2 != 0) && (array.GetLength(0) % 2 != 0))  // [odd,odd]
         {
             if (number < array.GetLength(1))
             {
@@ -169,8 +169,8 @@ int ReadInt(string title)
 
 void PrintAnswer((int, int, int) result, int number)
 {
-    if (result.Item1 != -1) Console.WriteLine($"Элемент под номером {number}, в массиве [{result.Item2},{result.Item3}] есть, и он = {result.Item1}.");
-    else Console.WriteLine($"Элемента под номером {number} в массиве нет!");
+    if (result.Item1 != -1) Console.WriteLine($"The element under the number {number}, in the array [{result.Item2},{result.Item3}] is, and it = {result.Item1}.");
+    else Console.WriteLine($"There is no element under the number {number} in the array!");
 }
 
 // */  

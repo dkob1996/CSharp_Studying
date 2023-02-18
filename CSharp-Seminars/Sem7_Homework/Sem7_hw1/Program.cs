@@ -1,5 +1,5 @@
 ﻿/*
-Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+Task 47. Define a two-dimensional array of size m ×n filled with random real numbers.
 
 m = 3, n = 4.
 0,5 7 -2 -0,2
@@ -10,8 +10,8 @@ m = 3, n = 4.
 
 try
 {
-    int m = ReadInt("Введите m");
-    int n = ReadInt("Введите n");
+    int m = ReadInt("Enter m");
+    int n = ReadInt("Enter n");
     double[,] array = Create2DArray(m,n);
     Print2DArray(array);
 }
@@ -60,6 +60,6 @@ int ReadInt(string title)
         return number;
     }
     
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }
 

@@ -1,20 +1,20 @@
 ﻿/*
-Задача 51: Задайте двумерный массив. Найдите сумму
-элементов, находящихся на главной диагонали (с индексами
-(0,0); (1;1) и т.д.
-Например, задан массив:
+Task 51: Define a two-dimensional array. Find the sum
+of the elements located on the main diagonal (with indexes
+(0,0); (1;1), etc.
+For example, an array is given:
 1 47 2
 5 92 3
 8 42 4
-Сумма элементов главной диагонали: 1+9+2 = 12
+The sum of the elements of the main diagonal: 1+9+2 = 12
 */
 
 
 
 try
 {
-    int m = ReadInt("Введите m");
-    int n = ReadInt("Введите n");
+    int m = ReadInt("Enter m");
+    int n = ReadInt("Enter n");
     int[,] array = Create2DArray(m, n);
     Print2DArray(array);
     Console.WriteLine();
@@ -66,7 +66,7 @@ int ReadInt(string title)
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }
 
 
@@ -85,5 +85,5 @@ int FindElements(int[,] array)
 
 void PrintElements(int sum)
 {
-    Console.WriteLine($"Сумма элементов на главной диагонали = {sum}");
+    Console.WriteLine($"Sum of elements on the main diagonal = {sum}");
 }

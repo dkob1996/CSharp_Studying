@@ -1,17 +1,17 @@
 ﻿/*
-Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+Task 52. Set a two-dimensional array of integers. Find the arithmetic mean of the elements in each column.
 
-Например, задан массив:
+For example, an array is given:
 1 4 7 2
 5 9 2 3
 8 4 2 4
-Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+Arithmetic mean of each column: 4.6; 5.6; 3.6; 3.
 */
 
 try
 {
-    int m = ReadInt("Введите кол-во столбцов:");
-    int n = ReadInt("Введите кол-во строк:");
+    int m = ReadInt("Enter the number of columns:");
+    int n = ReadInt("Enter the number of lines:");
     int[,] array = Create2DArray(m, n);
     Print2DArray(array);
     double[] result = FindAverageInColumns(array);
@@ -61,7 +61,7 @@ int ReadInt(string title)
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }
 
 double[] FindAverageInColumns(int[,] array)
@@ -82,7 +82,7 @@ double[] FindAverageInColumns(int[,] array)
 
 void PrintAnswer(double[] result)
 {
-    Console.WriteLine("Среднее арифметическое каждого столбца:");
+    Console.WriteLine("Arithmetic mean of each column:");
     for (var i = 0; i < result.Length; i++)
     {
         Console.Write(result[i] + ";" + " ");

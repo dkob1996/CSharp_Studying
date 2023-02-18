@@ -1,12 +1,12 @@
 ﻿/*
-Задача 49: Задайте двумерный массив. Найдите элементы, у
-которых оба индекса нечетные, и замените эти элементы на их
-квадраты.
-Например, изначально массив выглядел вот так:
+Task 49: Define a two-dimensional array. Find the elements
+that have both indexes odd, and replace these elements with their
+squares.
+For example, initially the array looked like this:
 1 4 7 2
 5 9 2 3
 8 4 2 4
-Новый массив будет выглядеть вот так:
+The new array will look like this:
 1 4 7 2
 5 81 2 9
 8 4 2 4
@@ -15,8 +15,8 @@
 
 try
 {
-    int m = ReadInt("Введите m");
-    int n = ReadInt("Введите n");
+    int m = ReadInt("Enter m");
+    int n = ReadInt("Enter n");
     int[,] array = Create2DArray(m, n);
     Print2DArray(array);
     Console.WriteLine();
@@ -70,7 +70,7 @@ int ReadInt(string title)
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }
 
 

@@ -1,5 +1,5 @@
-﻿//Задача 46: Задайте двумерный массив размером m×n,
-// заполненный случайными целыми числами.
+﻿//Task 46: Define a two-dimensional array of size m×n,
+// filled with random integers.
 //m = 3, n = 4. 
 /*1 4 8 19
 5 -2 33 -2
@@ -7,8 +7,8 @@
 
 try
 {
-    int m = ReadInt("Введите m");
-    int n = ReadInt("Введите n");
+    int m = ReadInt("Enter m");
+    int n = ReadInt("Enter n");
     int[,] array = Create2DArray(m,n);
     Print2DArray(array);
 }
@@ -57,7 +57,7 @@ int ReadInt(string title)
         return number;
     }
     
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }
 
 

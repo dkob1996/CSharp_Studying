@@ -1,6 +1,6 @@
 ﻿/*
-Задача 48: Задайте двумерный массив размера m на n, каждый элемент в массиве находится по формуле:
-Ai,j = i+j. Выведите полученный массив на экран.
+Task 48: Set a two-dimensional array of size m by n, each element in the array is found by the formula:
+Ai,j = i +j. Output the resulting array to the screen.
 m = 3, n = 4. 
 0 1 23
 1 2 34
@@ -10,8 +10,8 @@ m = 3, n = 4.
 
 try
 {
-    int m = ReadInt("Введите m");
-    int n = ReadInt("Введите n");
+    int m = ReadInt("Enter m");
+    int n = ReadInt("Enter n");
     int[,] array = Create2DArray(m,n);
     Print2DArray(array);
 }
@@ -58,6 +58,6 @@ int ReadInt(string title)
         return number;
     }
     
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }
 
