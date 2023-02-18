@@ -1,4 +1,8 @@
 ﻿/*
+There is a one-dimensional array array with n elements,
+it is required to find an array element equal to find.
+
+Translation:
 Имеется одномерный массив array из n элементов, 
 требуется найти элемент массива равный find.
 */

@@ -1,4 +1,4 @@
-﻿//Сортировка массива
+﻿//Sort the array
 
 int[] arr = { 1, 5, 4, 3, 2, 6, 7, 1, 1 };
 
@@ -15,7 +15,7 @@ void PrintArray(int[] array)
 
 PrintArray(arr);
 
-void SelectionSort(int[] array)                                 //метод упорядочивания от минимального к максимальному
+void SelectionSort(int[] array)                                 //ordering method from minimum to maximum
 {
     for (int i = 0; i < array.Length - 1; i++)
     {
@@ -34,7 +34,7 @@ void SelectionSort(int[] array)                                 //метод у�
 SelectionSort(arr);
 PrintArray(arr);
 
-void SelectionSortForMaxToMin(int[] array)                      //метод упорядочивания от максимального к минимальному
+void SelectionSortForMaxToMin(int[] array)                      //ordering method from maximum to minimum
 {
     for (int i = 0; i < array.Length - 1; i++)
     {

@@ -1,16 +1,16 @@
-﻿// № 1 - Метод который ничего не принимает и ничего не возвращает.
+﻿// № 1 - A method that takes nothing and returns nothing.
 
 /*
 void Method1()
 {
-    Console.WriteLine("Автор dkob1996");
+    Console.WriteLine("Author dkob1996");
 }
 
-Method1();                                    //вызов метода №1
+Method1();                                    //method call #1
 
 */
 
-// № 2 - Метод который принимает и ничего не возвращает.
+// № 2 - A method that accepts and returns nothing.
 
 /*
 
@@ -19,7 +19,7 @@ void Method2(string msg)
     Console.WriteLine(msg);
 }
 
-Method2("Такст сообщения");
+Method2("Text of the message");
 
 void Method21(string msg, int count)
 {
@@ -30,12 +30,12 @@ void Method21(string msg, int count)
         i++;
     }
 }
-//Method21(msg: "Такст сообщения", count: 4);
-Method21(count: 4, msg: "Такст сообщения");        //можно при именованных переменных располагать их как угодно.
+//Method21(msg: "Text of the message", count: 4);
+Method21(count: 4, msg: "Text of the message");        //With named variables, you can arrange them however you like.
 
 */
 
-// № 3 - Метод который ничего не принимает и возвращает.
+// № 3 - A method that takes nothing and returns.
 
 /*
 
@@ -49,7 +49,7 @@ Console.WriteLine(year);
 
 */
 
-// № 4 - Метод который принимает и возвращает. (c циклом while)
+// № 4 - A method that accepts and returns. (with while cycle)
 
 /*
 
@@ -71,7 +71,7 @@ Console.WriteLine(res);
 
 */
 
-// № 4 - Метод который принимает и возвращает. (c циклом for)
+// № 4 - A method that accepts and returns. (with for cycle)
 
 /*
 
