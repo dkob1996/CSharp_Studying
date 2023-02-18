@@ -1,12 +1,12 @@
 ﻿/*
-Задача 63: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от 1 до N.
+Task 63: set the value to N. Write a program that will output all natural numbers between 1 and N.
 N = 5 -> "1, 2, 3, 4, 5"
 N = 6 -> "1, 2, 3, 4, 5, 6"
 */
 
 try
 {
-    int N = ReadInt("Введите N:");
+    int N = ReadInt("Enter N:");
     int startNumber = 1;
     Console.WriteLine();
     CountOfN(startNumber, N);
@@ -16,7 +16,7 @@ catch (Exception ex)
     Console.WriteLine(ex.Message);
 }
 
-void CountOfN(int startNumber, int N)                          //Метод вывода чисел от startNumber до N
+void CountOfN(int startNumber, int N)                          //method for outputting numbers from startNumber to N
 {
     if (startNumber > N)
     {
@@ -27,7 +27,7 @@ void CountOfN(int startNumber, int N)                          //Метод вы
 
 }
 
-int ReadInt(string title)                                      //Метод ввода чисел с клавиатуры
+int ReadInt(string title)                                      //The method of entering numbers from the keyboard
 {
     Console.WriteLine(title);
 
@@ -38,5 +38,5 @@ int ReadInt(string title)                                      //Метод вв
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }

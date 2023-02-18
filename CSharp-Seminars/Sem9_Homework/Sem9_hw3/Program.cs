@@ -1,5 +1,5 @@
 ﻿/*
-Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+Task 68: Write a program for calculating the Ackerman function using recursion. Two non-negative numbers m and n are given.
 m = 2, n = 3 -> A(m,n) = 9
 m = 3, n = 2 -> A(m,n) = 29
 */
@@ -7,8 +7,8 @@ m = 3, n = 2 -> A(m,n) = 29
 
 try
 {
-    int m = ReadInt("Введите m:");
-    int n = ReadInt("Введите n:");
+    int m = ReadInt("Enter m:");
+    int n = ReadInt("Enter n:");
     Console.WriteLine();
     int Result = Akkerman(m, n);
     PrintAnswer(Result, m, n);
@@ -18,7 +18,7 @@ catch (Exception ex)
     Console.WriteLine(ex.Message);
 }
 
-int Akkerman(int m, int n)                           //Метод функции Аккермана
+int Akkerman(int m, int n)                           //Ackerman function method
 {
     if (m == 0)
     {
@@ -38,7 +38,7 @@ int Akkerman(int m, int n)                           //Метод функции
 
 }
 
-int ReadInt(string title)                                      //Метод ввода чисел с клавиатуры
+int ReadInt(string title)                                      //The method of entering numbers from the keyboard
 {
     Console.WriteLine(title);
 
@@ -49,12 +49,12 @@ int ReadInt(string title)                                      //Метод вв
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }
 
 
 
-void PrintAnswer(int Result, int m, int n)                    //Метод вывода ответа
+void PrintAnswer(int Result, int m, int n)                    //Response output method
 {
     Console.WriteLine($"A(m,n) = A({m},{n}) = {Result}.");
 }

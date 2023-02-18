@@ -1,12 +1,12 @@
 ﻿/*
-Задача 67: Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
+Task 67: Write a program that will accept a number as input and return the sum of its digits.
 453 -> 12 45 -> 9
 */
 
 
 try
 {
-    int N = ReadInt("Введите число:");
+    int N = ReadInt("Enter number:");
     Console.WriteLine();
     int Result = 0;
     int Sum = SumOfNumbers(Result, N);
@@ -17,7 +17,7 @@ catch (Exception ex)
     Console.WriteLine(ex.Message);
 }
 
-int SumOfNumbers(int Result, int N)                                    //Метод возврата суммы цифр числа
+int SumOfNumbers(int Result, int N)                                    //Method of returning the sum of digits of a number
 {
     if (N <= 0)
     {
@@ -32,7 +32,7 @@ int SumOfNumbers(int Result, int N)                                    //Мет�
 
 }
 
-int ReadInt(string title)                                      //Метод ввода чисел с клавиатуры
+int ReadInt(string title)                                      //The method of entering numbers from the keyboard
 {
     Console.WriteLine(title);
 
@@ -43,7 +43,7 @@ int ReadInt(string title)                                      //Метод вв
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }
 
 

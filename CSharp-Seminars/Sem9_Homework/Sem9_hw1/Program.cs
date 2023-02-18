@@ -1,5 +1,5 @@
 ﻿/*
-Задача 64: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от N до 1. Выполнить с помощью рекурсии.
+Task 64: Set the value to N. Write a program that outputs all natural numbers in the range from N to 1. Execute using recursion.
 
 N = 5 -> "5, 4, 3, 2, 1"
 N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
@@ -7,7 +7,7 @@ N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
 try
 {
-    int N = ReadInt("Введите N:");
+    int N = ReadInt("Enter N:");
     int startNumber = 1;
     Console.WriteLine();
     CountOfN(startNumber, N);
@@ -17,7 +17,7 @@ catch (Exception ex)
     Console.WriteLine(ex.Message);
 }
 
-void CountOfN(int startNumber, int N)                          //Метод вывода чисел от N до 1
+void CountOfN(int startNumber, int N)                          //Method of output of numbers from N to 1
 {
     if (startNumber > N)
     {
@@ -28,7 +28,7 @@ void CountOfN(int startNumber, int N)                          //Метод вы
 
 }
 
-int ReadInt(string title)                                      //Метод ввода чисел с клавиатуры
+int ReadInt(string title)                                      //The method of entering numbers from the keyboard
 {
     Console.WriteLine(title);
 
@@ -39,5 +39,5 @@ int ReadInt(string title)                                      //Метод вв
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }

@@ -1,13 +1,13 @@
 ﻿/*
-Задача 69: Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
+Task 69: Write a program that takes two numbers A and B as input, and raises the number A to the integer power of B using recursion.
 A = 3; B = 5 -> 243 (35) A = 2; B = 3 -> 8
 */
 
 
 try
 {
-    int A = ReadInt("Введите A:");
-    int B = ReadInt("Введите B:");
+    int A = ReadInt("Enter A:");
+    int B = ReadInt("Enter B:");
     int tmp = 1;
     Console.WriteLine();
     int Result = GetInDegree(tmp, A, B);
@@ -18,7 +18,7 @@ catch (Exception ex)
     Console.WriteLine(ex.Message);
 }
 
-int GetInDegree(int tmp, int A, int B)                                    //Метод возведения в степень
+int GetInDegree(int tmp, int A, int B)                                    //The method of exponentiation
 {
     if (B == 0)
     {
@@ -33,7 +33,7 @@ int GetInDegree(int tmp, int A, int B)                                    //Ме
 
 }
 
-int ReadInt(string title)                                      //Метод ввода чисел с клавиатуры
+int ReadInt(string title)                                      //The method of entering numbers from the keyboard
 {
     Console.WriteLine(title);
 
@@ -44,11 +44,11 @@ int ReadInt(string title)                                      //Метод вв
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }
 
 
-void PrintAnswer(int Result, int A, int B)                    //Метод вывода ответа
+void PrintAnswer(int Result, int A, int B)                    //Response output method
 {
-    Console.WriteLine($"[{A}] в степени [{B}] = {Result}.");
+    Console.WriteLine($"[{A}] to the degree of [{B}] = {Result}.");
 }

@@ -1,16 +1,16 @@
 ﻿/*
-Задача 65: Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
+Task 65: set the values M and N. Write a program that will output all natural numbers between M and N.
 M = 1; N = 5 -> "1, 2, 3, 4, 5" M = 4; N = 8 -> "4, 6, 7, 8"
 */
 
 try
 {
-    int M = ReadInt("Введите M:");
-    int N = ReadInt("Введите N:");
+    int M = ReadInt("Enter M:");
+    int N = ReadInt("Enter N:");
     Console.WriteLine();
     if (M >= N)
     {
-        Console.WriteLine($"Число M=[{M}] должно быть меньше N=[{N}]");
+        Console.WriteLine($"The number M=[{M}] must be less than N=[{N}]");
     }
     else
     {
@@ -22,7 +22,7 @@ catch (Exception ex)
     Console.WriteLine(ex.Message);
 }
 
-void CountOfN(int M, int N)                                    //Метод вывода чисел от M до N
+void CountOfN(int M, int N)                                    //Method of output of numbers from M to N
 {
     if (M > N)
     {
@@ -33,7 +33,7 @@ void CountOfN(int M, int N)                                    //Метод вы
 
 }
 
-int ReadInt(string title)                                      //Метод ввода чисел с клавиатуры
+int ReadInt(string title)                                      //The method of entering numbers from the keyboard
 {
     Console.WriteLine(title);
 
@@ -44,5 +44,5 @@ int ReadInt(string title)                                      //Метод вв
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }

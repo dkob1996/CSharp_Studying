@@ -1,6 +1,6 @@
 ﻿/*
-Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов 
-в промежутке от M до N. Выполнить с помощью рекурсии.
+Task 66: Set the values of M and N. Write a program that finds the sum of natural elements
+in the range from M to N. Execute using recursion.
 
 M = 1; N = 15 -> 120
 M = 4; N = 8. -> 30
@@ -8,8 +8,8 @@ M = 4; N = 8. -> 30
 
 try
 {
-    int M = ReadInt("Введите M:");
-    int N = ReadInt("Введите N:");
+    int M = ReadInt("Enter M:");
+    int N = ReadInt("Enter N:");
     int tmp = 0;
     Console.WriteLine();
     int Result = GetInDegree(tmp, M, N);
@@ -20,7 +20,7 @@ catch (Exception ex)
     Console.WriteLine(ex.Message);
 }
 
-int GetInDegree(int tmp, int M, int N)                           //Метод суммы натуральных элементов от M до N
+int GetInDegree(int tmp, int M, int N)                           //The method of the sum of natural elements from M to N
 {
     if (M > N)
     {
@@ -35,7 +35,7 @@ int GetInDegree(int tmp, int M, int N)                           //Метод с
 
 }
 
-int ReadInt(string title)                                      //Метод ввода чисел с клавиатуры
+int ReadInt(string title)                                      //the method of entering numbers from the keyboard
 {
     Console.WriteLine(title);
 
@@ -46,12 +46,12 @@ int ReadInt(string title)                                      //Метод вв
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }
 
 
 
-void PrintAnswer(int Result, int M, int N)                    //Метод вывода ответа
+void PrintAnswer(int Result, int M, int N)                    //Response output method
 {
-    Console.WriteLine($"Сумма числе от [{M}] до [{N}] = {Result}.");
+    Console.WriteLine($"Sum of numbers from [{M}] to [{N}] = {Result}.");
 }
