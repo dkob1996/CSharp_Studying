@@ -1,10 +1,10 @@
 ﻿/*
-Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
-Например, задан массив:
+Task 54: Define a two-dimensional array. Write a program that will sort the elements of each row of a two-dimensional array in descending order.
+For example, an array is given:
 1 4 7 2
 5 9 2 3
 8 4 2 4
-В итоге получается вот такой массив:
+The result is an array like this:
 7 4 2 1
 9 5 3 2
 8 4 4 2
@@ -13,14 +13,14 @@
 
 try
 {
-    int m = ReadInt("Введите кол-во столбцов:");
-    int n = ReadInt("Введите кол-во строк:");
+    int m = ReadInt("Enter the number of columns:");
+    int n = ReadInt("Enter the number of lines:");
     int[,] array = Create2DArray(m, n);
-    Console.WriteLine("Исходный массив:");
+    Console.WriteLine("Source array:");
     Print2DArray(array);
     Console.WriteLine();
     SelectionSortForMaxToMin(array);
-    Console.WriteLine("Отсортированный массив:");
+    Console.WriteLine("Sorted array:");
     Print2DArray(array);
 }
 catch (Exception ex)
@@ -28,7 +28,7 @@ catch (Exception ex)
     Console.WriteLine(ex.Message);
 }
 
-void Print2DArray(int[,] array)                                //Метод печати двумерного массива
+void Print2DArray(int[,] array)                                //Two-dimensional array printing method
 {
     for (var i = 0; i < array.GetLength(0); i++)
     {
@@ -40,7 +40,7 @@ void Print2DArray(int[,] array)                                //Метод пе
     }
 }
 
-int[,] Create2DArray(int m, int n)                             //Метод создания двумерного массива
+int[,] Create2DArray(int m, int n)                             //Method for creating a two-dimensional array
 {
     int[,] array = new int[m, n];
 
@@ -57,7 +57,7 @@ int[,] Create2DArray(int m, int n)                             //Метод со
     return array;
 }
 
-void Sort1DMassive(int[] tempArray)                            //Метод сортировки одномерного массива(пузрьком) от макс к мин
+void Sort1DMassive(int[] tempArray)                            //Method of sorting a one-dimensional array (bubble) from max to min
 {
     for (int i = 0; i < tempArray.Length; i++)
         for (int j = 0; j < tempArray.Length - i - 1; j++)
@@ -71,7 +71,7 @@ void Sort1DMassive(int[] tempArray)                            //Метод со
         }
 }
 
-void RepairValuesInStringsOrColumns(bool isRow, int index, int[] Source1DMassive, int[,] Sourse2DMassive)   //Метод замены отсортированной строчки
+void RepairValuesInStringsOrColumns(bool isRow, int index, int[] Source1DMassive, int[,] Sourse2DMassive)   //Method of replacing the sorted line
 {
     for (int k = 0; k < Source1DMassive.Length; k++)
     {
@@ -82,7 +82,7 @@ void RepairValuesInStringsOrColumns(bool isRow, int index, int[] Source1DMassive
     }
 }
 
-void SelectionSortForMaxToMin(int[,] array)                    //Метод сортировки двумерного массива с вызовом других методов
+void SelectionSortForMaxToMin(int[,] array)                    //A method for sorting a two-dimensional array with calling other methods
 {
 
     int colCount = array.GetLength(0);
@@ -99,7 +99,7 @@ void SelectionSortForMaxToMin(int[,] array)                    //Метод со
 }
 
 
-int ReadInt(string title)                                      //Метод ввода чисел с клавиатуры
+int ReadInt(string title)                                      //The method of entering numbers from the keyboard
 {
     Console.WriteLine(title);
 
@@ -110,6 +110,6 @@ int ReadInt(string title)                                      //Метод вв
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }
 

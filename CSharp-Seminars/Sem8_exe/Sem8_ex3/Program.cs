@@ -1,11 +1,11 @@
 ﻿/*
-Задача 59: Задайте двумерный массив из целых чисел. Напишите программу, которая удалит строку и столбец, на пересечении которых расположен наименьший элемент массива.
-Например, задан массив: 
+Task 59: Set a two-dimensional array of integers. Write a program that will delete the row and column at the intersection of which the smallest element of the array is located.
+For example, an array is given: 
 14 72
 59 23
 84 24
 52 67
-Наименьший элемент - 1, на выходе получим следующий массив:
+The smallest element is 1, at the output we get the following array:
 94 2
 22 6
 34 7
@@ -13,16 +13,16 @@
 
 try
 {
-    int m = ReadInt("Введите кол-во строк и столбцов одним числом:");
+    int m = ReadInt("Enter the number of rows and columns in one number:");
     int[,] array = Create2DArray(m);
-    Console.WriteLine("Старый массив:");
+    Console.WriteLine("Old array:");
     Print2DArray(array);
     (int, int) CoordsOfMin = FindCoordsOfMinElement(array);
     Console.WriteLine();
-    Console.WriteLine($"Координаты = [{CoordsOfMin.Item1},{CoordsOfMin.Item2}].");
+    Console.WriteLine($"Coordinates = [{CoordsOfMin.Item1},{CoordsOfMin.Item2}].");
     int[,] mass = CutMassive(array, CoordsOfMin);
     Console.WriteLine();
-    Console.WriteLine("Новый массив:");
+    Console.WriteLine("New array:");
     Print2DArray(mass);
 
 }
@@ -71,7 +71,7 @@ int ReadInt(string title)
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }
 
 

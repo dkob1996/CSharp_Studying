@@ -1,20 +1,20 @@
 ﻿/*
-Задача 57: Составить частотный словарь элементов двумерного массива. Частотный словарь содержит информацию о том, 
-сколько раз встречается элемент входных данных.
+Task 57: Create a frequency dictionary of elements of a two-dimensional array. The frequency dictionary contains information about
+how many times an input data element occurs.
 
 1, 2, 3 4, 6, 1 2, 1, 6
-1 встречается 3 раза
-2 встречается 2 раз
-3 встречается 1 раз
-4 встречается 1 раз
-6 встречается 2 раза
+1 occurs 3 times
+2 occurs 2 times
+3 occurs 1 time
+4 occurs 1 time
+6 occurs 2 times
 */
 
 
 try
 {
-    int m = ReadInt("Введите кол-во столбцов:");
-    int n = ReadInt("Введите кол-во строк:");
+    int m = ReadInt("Enter the number of columns:");
+    int n = ReadInt("Enter the number of lines:");
     int[,] array = Create2DArray(m, n);
     Print2DArray(array);
     List<(int number, int frequence)> dictionary = FindFrequence(array);
@@ -64,7 +64,7 @@ int ReadInt(string title)
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }
 
 

@@ -1,7 +1,9 @@
-﻿/*Задайте двумерный массив из целых чисел. Напишите программу, 
-которая удалит строку и столбец, на пересечении которых расположен наименьший элемент массива.*/
-int m = InputInt("Введите число строк: ");
-int n = InputInt("Введите число столбцов: ");
+﻿/*Specify a two-dimensional array of integers. Write a program
+that will delete the row and column at the intersection of which the smallest element of the array is located.*/
+
+
+int m = InputInt("Enter the number of lines: ");
+int n = InputInt("Enter the number of columns: ");
 int[,] array = Create2DRandomArray(m, n);
 Print2DArray(array);
 Console.WriteLine(FindMin(array));

@@ -1,6 +1,6 @@
 ﻿/*
-Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
-Например, на выходе получается вот такой массив:
+Task 62. Write a program that will fill a 4-by-4 spiral array.
+For example, the output is an array like this:
 01 02 03 04
 12 13 14 05
 11 16 15 06
@@ -9,13 +9,13 @@
 
 try
 {
-    int m = ReadInt("Введите кол-во столбцов:");
-    int n = ReadInt("Введите кол-во строк:");
+    int m = ReadInt("Enter the number of columns:");
+    int n = ReadInt("Enter the number of lines:");
 
     Console.WriteLine();
     int[,] array = new int[m, n];
     Create2DSpiralArray(array);
-    Console.WriteLine("Спиральный массив:");
+    Console.WriteLine("Spiral Array:");
     Print2DArray(array);
     Console.WriteLine();
 
@@ -25,7 +25,7 @@ catch (Exception ex)
     Console.WriteLine(ex.Message);
 }
 
-void Print2DArray(int[,] array)                         //Метод печати двумерного массива
+void Print2DArray(int[,] array)                         //Two-dimensional array printing method
 {
     for (var i = 0; i < array.GetLength(0); i++)
     {
@@ -37,14 +37,14 @@ void Print2DArray(int[,] array)                         //Метод печат�
     }
 }
 
-void Create2DSpiralArray(int[,] array)                  //Метод заполнения спирально двумерного массива
+void Create2DSpiralArray(int[,] array)                  //Method of filling a spiral two-dimensional array
 {
     int hight = array.GetLength(0);
     int width = array.GetLength(1);
 
     int s = 1; 
                                             
-    for (int y = 0; y < width; y++)                      //Заполнение первого периметра
+    for (int y = 0; y < width; y++)                      //Filling in the first perimeter
     {
         array[0, y] = s;
         s++;
@@ -65,33 +65,33 @@ void Create2DSpiralArray(int[,] array)                  //Метод запол�
         s++;
     }
 
-    int c = 1;                                   //инициализируем начальные координаты второго круга
+    int c = 1;                                   //initialize the initial coordinates of the second circle
     int d = 1;
 
     while (s < hight * width)
     {
-        while (array[c, d + 1] == 0)             //вправо
+        while (array[c, d + 1] == 0)             //to the right
         {
             array[c, d] = s;
             s++;
             d++;
         }
 
-        while (array[c + 1, d] == 0)            //вниз
+        while (array[c + 1, d] == 0)            //down
         {
             array[c, d] = s;
             s++;
             c++;
         }
 
-        while (array[c, d - 1] == 0)            //влево
+        while (array[c, d - 1] == 0)            //left
         {
             array[c, d] = s;
             s++;
             d--;
         }
 
-        while (array[c - 1, d] == 0)            //вверх
+        while (array[c - 1, d] == 0)            //up
         {
             array[c, d] = s;
             s++;
@@ -99,7 +99,7 @@ void Create2DSpiralArray(int[,] array)                  //Метод запол�
         }
     }
 
-    for (int x = 0; x < hight; x++)            //заполняем последнее значение в центре
+    for (int x = 0; x < hight; x++)            //fill in the last value in the center
     {
         for (int y = 0; y < width; y++)
         {
@@ -111,7 +111,7 @@ void Create2DSpiralArray(int[,] array)                  //Метод запол�
     }
 }
 
-int ReadInt(string title)                               //Метод ввода чисел с клавиатуры
+int ReadInt(string title)                               //The method of entering numbers from the keyboard
 {
     Console.WriteLine(title);
 
@@ -122,5 +122,5 @@ int ReadInt(string title)                               //Метод ввода 
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }

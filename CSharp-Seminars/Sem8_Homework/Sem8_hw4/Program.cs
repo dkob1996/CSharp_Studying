@@ -1,7 +1,7 @@
 ﻿/*
-Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, 
-которая будет построчно выводить массив, добавляя индексы каждого элемента.
-Массив размером 2 x 2 x 2
+Task 60. ...Form a three-dimensional array of non-repeating two-digit numbers. Write a program
+that will output an array line by line, adding indexes of each element.
+Array size 2 x 2 x 2
 66(0,0,0) 25(0,1,0)
 34(1,0,0) 41(1,1,0)
 27(0,0,1) 90(0,1,1)
@@ -11,14 +11,14 @@
 
 try
 {
-    Console.WriteLine("Введите размерность a x b x c.");
-    int a = ReadInt("Введите a:");
-    int b = ReadInt("Введите b:");
-    int c = ReadInt("Введите c:");
+    Console.WriteLine("Enter the dimension a x b x c.");
+    int a = ReadInt("Enter a:");
+    int b = ReadInt("Enter b:");
+    int c = ReadInt("Enter c:");
     Console.WriteLine();
 
     int[,,] A = Create3DArray(a, b, c);
-    Console.WriteLine("Массив:");
+    Console.WriteLine("Array:");
     Print3DArray(A);
     Console.WriteLine();
 
@@ -29,7 +29,7 @@ catch (Exception ex)
 }
 
 
-void Print3DArray(int[,,] array)                         //Метод печати трехмерного массива
+void Print3DArray(int[,,] array)                         //Method of printing a three-dimensional array
 {
     for (var i = 0; i < array.GetLength(0); i++)
     {
@@ -45,7 +45,7 @@ void Print3DArray(int[,,] array)                         //Метод печат
 }
 
 
-int[,,] Create3DArray(int m, int n, int k)               //Метод создания трехмерного массива заполненого случайными числами
+int[,,] Create3DArray(int m, int n, int k)               //A method for creating a three-dimensional array filled with random numbers
 {
     Random random = new Random();
     int[,,] array = new int[m, n, k];
@@ -68,7 +68,7 @@ int[,,] Create3DArray(int m, int n, int k)               //Метод созда
     return array;
 }
 
-int ReadInt(string title)                                //Метод ввода чисел с клавиатуры
+int ReadInt(string title)                                //The method of entering numbers from the keyboard
 {
     Console.WriteLine(title);
 
@@ -79,10 +79,10 @@ int ReadInt(string title)                                //Метод ввода
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }
 
-bool CheckTheRepeatetElement(int[,,] array, int value)   //Метод проверки элементов рандома на уникальность
+bool CheckTheRepeatetElement(int[,,] array, int value)   //Method of checking random elements for uniqueness
 {
     foreach (var item in array)
     {

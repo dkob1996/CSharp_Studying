@@ -1,21 +1,21 @@
 ﻿/*
-Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+Task 56: Define a rectangular two-dimensional array. Write a program that will find the string with the smallest sum of elements.
 
-Например, задан массив:
+For example, an array is given:
 
 1 4 7 2
 5 9 2 3
 8 4 2 4
 5 2 6 7
 
-Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка.
-Примечание: вывести индекс нужной строки.
+The program counts the sum of elements in each row and outputs the row number with the smallest sum of elements: 1 row.
+Note: output the index of the desired row.
 */
 
 try
 {
-    int m = ReadInt("Введите кол-во столбцов:");
-    int n = ReadInt("Введите кол-во строк:");
+    int m = ReadInt("Enter the number of columns:");
+    int n = ReadInt("Enter the number of lines:");
     Console.WriteLine();
     int[,] array = Create2DArray(m, n);
     Print2DArray(array);
@@ -33,7 +33,7 @@ catch (Exception ex)
     Console.WriteLine(ex.Message);
 }
 
-void Print2DArray(int[,] array)                         //Метод печати двумерного массива
+void Print2DArray(int[,] array)                         //Two-dimensional array printing method
 {
     for (var i = 0; i < array.GetLength(0); i++)
     {
@@ -45,7 +45,7 @@ void Print2DArray(int[,] array)                         //Метод печат�
     }
 }
 
-int[,] Create2DArray(int m, int n)                      //Метод создания двумерного массива заполненого случайными числами
+int[,] Create2DArray(int m, int n)                      //A method for creating a two-dimensional array filled with random numbers
 {
     Random random = new Random();
     int[,] array = new int[m, n];
@@ -61,7 +61,7 @@ int[,] Create2DArray(int m, int n)                      //Метод созда�
     return array;
 }
 
-int ReadInt(string title)                               //Метод ввода чисел с клавиатуры
+int ReadInt(string title)                               //The method of entering numbers from the keyboard
 {
     Console.WriteLine(title);
 
@@ -72,10 +72,10 @@ int ReadInt(string title)                               //Метод ввода 
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }
 
-int[] FindSumInStrings(int[,] array)                    //Метод суммирования значения элементов в сроках массива
+int[] FindSumInStrings(int[,] array)                    //Method for summing the values of elements in array rows
 {
     int[] mass = new int[array.GetLength(0)];
     int[] result = new int[array.GetLength(0)];
@@ -91,16 +91,16 @@ int[] FindSumInStrings(int[,] array)                    //Метод сумми�
     return mass;
 }
 
-void PrintAnswer(int[] result)                          //Метод печати массива суммирования (в основном надо для проверки)
+void PrintAnswer(int[] result)                          //The method of printing the summation array (mainly needed for verification)
 {
-    Console.WriteLine("Суммы элементов в строках:");
+    Console.WriteLine("Sums of elements in rows:");
     for (var i = 0; i < result.Length; i++)
     {
         Console.Write(result[i] + ";" + " ");
     }
 }
 
-(int, int) StringsCompassions(int[] result)             //Метод поиска минимальной строки в массиве суммы строк
+(int, int) StringsCompassions(int[] result)             //The method of finding the minimum string in the array of the sum of strings
 {
     int MinIndex = 0;
     int MinString = result[0];
@@ -115,7 +115,7 @@ void PrintAnswer(int[] result)                          //Метод печат�
     return (MinIndex, MinString);
 }
 
-(int[], int) FindRepeatetIndex(int[] result, (int, int) FindedString)              //Метод поиска повторяющихся минимальных элементов
+(int[], int) FindRepeatetIndex(int[] result, (int, int) FindedString)              //A method for finding duplicate minimal elements
 {
     int flag = -1;
     int[] RepeatetIndexes = new int[result.Length];
@@ -132,16 +132,16 @@ void PrintAnswer(int[] result)                          //Метод печат�
     return (RepeatetIndexes, flag);
 }
 
-void PrintResultCompassion((int, int) FindedString, (int[], int) RepeatedInexes)   //Метод печати результатов сравнения суммы элем-ов строк
+void PrintResultCompassion((int, int) FindedString, (int[], int) RepeatedInexes)   //The method of printing the results of comparing the sum of the elem lines
 {
     if (RepeatedInexes.Item2 <= 0)
     {
-        Console.WriteLine($"Строка № {FindedString.Item1} с наименьшим числом элементов (кол-во = {FindedString.Item2}).");
+        Console.WriteLine($"String No. {FindedString.Item1} with the smallest number of elements (count = {FindedString.Item2}).");
     }
     if (RepeatedInexes.Item2 > 0)
     {
-        Console.WriteLine("В массиве оказалось несколько одинаковых строчек с минимальным значением!");
-        Console.WriteLine($"Значения элементов = {FindedString.Item2}. Индексы этих элементов:");
+        Console.WriteLine("There were several identical lines with a minimum value in the array!");
+        Console.WriteLine($"Element values = {FindedString.Item2}. Indexes of these elements:");
         for (var i = 0; i < RepeatedInexes.Item1.Length; i++)
         {
             if (RepeatedInexes.Item1[i] != 0) Console.Write(RepeatedInexes.Item1[i] - 1 + ";" + " ");

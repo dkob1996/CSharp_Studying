@@ -1,16 +1,16 @@
 ﻿/*
-Задача 55: Задайте двумерный массив. Напишите программу, 
-которая заменяет строки на столбцы. В случае, если это невозможно, программа должна вывести сообщение для пользователя.
+Task 55: Define a two-dimensional array. Write a program
+that replaces rows with columns. If this is not possible, the program should output a message to the user.
 */
 
 try
 {
-    int m = ReadInt("Введите кол-во столбцов:");
-    int n = ReadInt("Введите кол-во строк:");
+    int m = ReadInt("Enter the number of columns:");
+    int n = ReadInt("Enter the number of lines:");
     int[,] array = Create2DArray(m, n);
     Print2DArray(array);
     int[,] result = FlipMatix(array);
-    Console.WriteLine("Перевернутая матрица:");
+    Console.WriteLine("Inverted matrix:");
     Print2DArray(result);
 }
 catch (Exception ex)
@@ -57,7 +57,7 @@ int ReadInt(string title)
         return number;
     }
 
-    throw new Exception("Введены не корректные символы");
+    throw new Exception("Incorrect symbols have been entered");
 }
 
 int[,] FlipMatix(int[,] array)
@@ -66,7 +66,7 @@ int[,] FlipMatix(int[,] array)
 
     if (array.GetLength(0) != array.GetLength(1))
     {
-        Console.WriteLine("Матрица не квадратная!");
+        Console.WriteLine("The matrix is not square!");
     }
     else
     {
