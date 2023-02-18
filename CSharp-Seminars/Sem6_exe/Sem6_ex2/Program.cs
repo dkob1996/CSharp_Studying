@@ -1,10 +1,10 @@
 ﻿/*
-Задача 40: Напишите программу, которая принимает на вход три числа и проверяет, может ли существовать
-треугольник с сторонами такой длины.
-Теорема о неравенстве треугольника: каждая сторона треугольника меньше суммы двух других сторон.
+Task 40: Write a program that accepts three numbers as input and checks whether a
+triangle with sides of this length can exist.
+Triangle inequality theorem: Each side of a triangle is less than the sum of the other two sides.
 */
 
-Console.WriteLine("Введите длинну трех сторон треугольника:");
+Console.WriteLine("Enter the length of the three sides of the triangle:");
 int a = int.Parse(Console.ReadLine());
 int b = int.Parse(Console.ReadLine());
 int c = int.Parse(Console.ReadLine());

@@ -1,24 +1,24 @@
 ﻿/*
-Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, 
-заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; 
-значения b1, k1, b2 и k2 задаются пользователем.
+Task 43: Write a program that finds the intersection point of two straight
+lines given by the equations y = k1 * x + b1, y = k2 * x + b2; 
+the values b1, k1, b2 and k2 are set by the user.
 
 b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> 
 (-0,5; -0,5)
 
 b1 = 2, k1 = 5, b2 = 4, k2 = 5 
-Параллельны
+Parallel
 
 b1 = 2, k1 = 5, b2 = 2, k2 = 5 
-Совпадают
+Match
 */
 
-double b1 = EnterNumber("Введите число b1: ");                                                  //вводим переменные с клавиатуры
-double k1 = EnterNumber("Введите число k1: ");
-double b2 = EnterNumber("Введите число b2: ");
-double k2 = EnterNumber("Введите число k2: ");
+double b1 = EnterNumber("Enter number b1: ");                                                  //entering variables from the keyboard
+double k1 = EnterNumber("Enter number k1: ");
+double b2 = EnterNumber("Enter number b2: ");
+double k2 = EnterNumber("Enter number k2: ");
 
-(double, double, bool, bool) FindComasOfCrossroad(double b1, double k1, double b2, double k2)   //метод по поиску пересечений
+(double, double, bool, bool) FindComasOfCrossroad(double b1, double k1, double b2, double k2)   //method for finding intersections
 {
     double findX = 0;
     double findY = 0;
@@ -43,30 +43,30 @@ double k2 = EnterNumber("Введите число k2: ");
 
 }
 
-(double, double, bool, bool) CoordsAndFlags = FindComasOfCrossroad(b1, k1, b2, k2);                   //обращение к методу по поиску пересечений
+(double, double, bool, bool) CoordsAndFlags = FindComasOfCrossroad(b1, k1, b2, k2);                   //reference to the method for finding intersections
 
 
-PrintAnswer(CoordsAndFlags);                                                                         //обращение к методу по выводу x,y или другого ответа
+PrintAnswer(CoordsAndFlags);                                                                         //accessing the method to output x,y, or another response
 
 
-void PrintAnswer((double, double, bool, bool) CoordsAndFlags)                                        //метод вывода сообщения
+void PrintAnswer((double, double, bool, bool) CoordsAndFlags)                                        //message output method
 {
     if ((CoordsAndFlags.Item3 == true) && (CoordsAndFlags.Item4 == false))
     {
-        Console.WriteLine($"Координаты пересечения - x: {CoordsAndFlags.Item1}, y: {CoordsAndFlags.Item2}");
+        Console.WriteLine($"Intersection coordinates - x: {CoordsAndFlags.Item1}, y: {CoordsAndFlags.Item2}");
     }
     if (CoordsAndFlags.Item4 == true)
     {
-        Console.WriteLine("Прямые совпадают");
+        Console.WriteLine("Straight lines match");
     }
     if (CoordsAndFlags.Item3 == false)
     {
-        Console.WriteLine("Прямые параллельны");
+        Console.WriteLine("Straight lines are parallel");
     }
 }
 
 
-double EnterNumber(string text)                                                                         //метод печати сообщения при вводе переменных
+double EnterNumber(string text)                                                                         //method of printing a message when entering variables
 {
     bool isParsed = false;
     double number = 0;

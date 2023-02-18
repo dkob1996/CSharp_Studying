@@ -1,19 +1,20 @@
 ﻿/*
-Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное. 45 -> 101101
+Task 42: Write a program that will convert a decimal number to binary. 
+45 -> 101101
 3 -> 11
 2 -> 10
 */
 
-Console.WriteLine("Введите число для трансформации в двоичное:");
+Console.WriteLine("Enter a number to convert to binary:");
 int number = int.Parse(Console.ReadLine());
 
 string number2nd = ConvertTo2nd(number);
 
-Console.WriteLine($"Результат перевода: {number2nd}");
+Console.WriteLine($"Translation result: {number2nd}");
 
 string ConvertTo2nd(int number)
 {
-    string str = String.Empty;                                  //Пустая строка.
+    string str = String.Empty;                                  //Empty string.
     while (number > 0)
     {
         str = number % 2 + str;

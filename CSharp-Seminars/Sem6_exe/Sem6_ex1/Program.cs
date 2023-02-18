@@ -1,7 +1,8 @@
-﻿//Задача 39: Напишите программу, которая перевернёт одномерный массив
-// (последний элемент будет на первом месте, а первый - на последнем и т.д.)
+﻿//Task 39: Write a program that will flip a one-dimensional array
+// (the last element will be in the first place, and the first one will be in the last, etc.)
 //[1 2 3 4 5] -> [5 4 3 2 1]
 //[6 7 3 6] -> [6 3 7 6]
+
 // int a = 5;
 // int b = 6;
 // int tmp = a;

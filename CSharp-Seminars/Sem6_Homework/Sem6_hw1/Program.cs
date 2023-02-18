@@ -1,10 +1,10 @@
 ﻿/*
-Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+Task 41: The user enters M numbers from the keyboard. Count how many numbers greater than 0 the user entered.
 0, 7, 8, -2, -2 -> 2
 1, -7, 567, 89, 223-> 3
 */
 
-Console.WriteLine("Введите количество элементов массива");
+Console.WriteLine("Enter the number of array elements");
 int M = int.Parse(Console.ReadLine());
 
 int[] array = CreateMassive(M);
@@ -15,7 +15,7 @@ int counter = CountOfNonZeroElements(array);
 
 void PrintArray(int[] arr)
 {
-    Console.WriteLine("Массив:");
+    Console.WriteLine("Massive:");
     Console.Write("[");
     for (var i = 0; i < arr.Length - 1; i++)
     {
@@ -28,7 +28,7 @@ void PrintArray(int[] arr)
 int[] CreateMassive(int number)
 {
     int[] array = new int[number];
-    Console.WriteLine("Введите подряд через Enter элементы массива");
+    Console.WriteLine("Enter the array elements in a row via Enter");
     for (int i = 0; i < array.Length; i++)
     {
         array[i] = int.Parse(Console.ReadLine());
@@ -49,4 +49,4 @@ int CountOfNonZeroElements(int[] array)
     return count;
 }
 
-Console.WriteLine($"Количество положительных чисел : {counter}");
+Console.WriteLine($"Number of positive numbers: {counter}");

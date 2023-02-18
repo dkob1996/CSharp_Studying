@@ -1,9 +1,9 @@
 ﻿/*
-Задача 45: Напишите программу, которая будет создавать копию заданного массива с помощью
-поэлементного копирования.
+Task 45: Write a program that will create a copy of a given array using
+piecemeal copying.
 */
 
-Console.WriteLine("Введите количество элементов массива");
+Console.WriteLine("Enter the number of array elements");
 int ElementCount = int.Parse(Console.ReadLine());
 
 int[] array = CreateMassive(ElementCount);
@@ -12,7 +12,7 @@ int[] mass = CoppyMassive(array, ElementCount);
 PrintArray(mass);
 void PrintArray(int[] arr)
 {
-    Console.WriteLine("Скопированный массив:");
+    Console.WriteLine("Copied array:");
     Console.Write("[");
     for (var i = 0; i < arr.Length - 1; i++)
     {
@@ -25,7 +25,7 @@ void PrintArray(int[] arr)
 int[] CreateMassive(int number)
 {
     int[] array = new int[number];
-    Console.WriteLine("Введите подряд через Enter элементы массива");
+    Console.WriteLine("Enter the array elements in a row via Enter");
     for (int i = 0; i < array.Length; i++)
     {
         array[i] = int.Parse(Console.ReadLine());

@@ -1,12 +1,13 @@
 ﻿/*
-Задача 44: Не используя рекурсию, выведите первые
-N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и
+Task 44: Without using recursion, output the first
+N Fibonacci numbers. The first two Fibonacci numbers are: 0 and
 1.
-Если N = 5 -> 0 1 1 2 3 Если N = 3 -> 0 1 1
-Если N = 7 -> 0 1 1 2 3 5 8
+If N = 5 -> 0 1 1 2 3 
+If N = 3 -> 0 1 1
+If N = 7 -> 0 1 1 2 3 5 8
 */
 
-Console.WriteLine("Введите количество чисел Фибоначчи:");
+Console.WriteLine("Enter the number of Fibonacci numbers:");
 int N = int.Parse(Console.ReadLine());
 
 int[] result = CreateFibonacchi(N);
@@ -27,7 +28,7 @@ PrintArray(result);
 
 void PrintArray(int[] arr)
 {
-    Console.WriteLine("Массив чисел Фиббоначи:");
+    Console.WriteLine("Array of Fibonacci numbers:");
     Console.Write("[");
     for (var i = 0; i < arr.Length - 1; i++)
     {
