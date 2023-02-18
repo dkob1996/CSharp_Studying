@@ -1,41 +1,41 @@
-﻿//Напишите программу, которая будет выдавать название дня недели по заданному номеру.
-//3 -> Среда 5 -> Пятница
+﻿//Write a program that will output the name of the day of the week given the number.
+//3 -> Wednesday 5 -> Friday
 
-Console.WriteLine("Напишите номер от 1 до 7 включительно");              //вывод сообщения о правилах вводе числа
-int day = int.Parse(Console.ReadLine());                                 //ввод с клавидатуры числа
+Console.WriteLine("Write a number from 1 to 7 inclusive");              //output a message about the rules for entering a number
+int day = int.Parse(Console.ReadLine());                                 //number input from the keyboard
 
-if ((day>0) & (day<8))                                                   //проверка числа на вхождение в диапазон от 1 до 7 включительно
-{                                                                        //дальше идут условия по каждому дню недели
+if ((day>0) & (day<8))                                                   //check whether a number is in the range from 1 to 7 inclusive
+{                                                                        //then there are conditions for each day of the week
   if (day == 1)
   {
-    Console.WriteLine("Понедельник");
+    Console.WriteLine("Monday");
   }
   if (day == 2)
   {
-    Console.WriteLine("Вторник");
+    Console.WriteLine("Tuesday");
   }
   if (day == 3)
   {
-    Console.WriteLine("Среда");
+    Console.WriteLine("Wednesday");
   }
   if (day == 4)
   {
-    Console.WriteLine("Четверг");
+    Console.WriteLine("Thursday");
   }
   if (day == 5)
   {
-    Console.WriteLine("Пятница! Ура!");
+    Console.WriteLine("Friday! Yep!");
   }
   if (day == 6)
   {
-    Console.WriteLine("Суббота! Ура!");
+    Console.WriteLine("Saturday! Yep!");
   }
   if (day == 7)
   {
-    Console.WriteLine("Воскресенье( Завтра на работу(");
+    Console.WriteLine("Sunday( I have to go to work tomorrow(");
   }
 }
 else
 {
-    Console.WriteLine("Некорректное число дня недели");                    //если число меньше 1 или больше 7, то выводим сообщение
+    Console.WriteLine("Invalid day of the week");                    //if the number is less than 1 or greater than 7, then display a messageif the number is less than 1 or greater than 7, then display a message
 }

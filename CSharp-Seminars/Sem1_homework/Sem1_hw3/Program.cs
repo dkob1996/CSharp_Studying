@@ -1,17 +1,17 @@
-﻿//Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+﻿//Task 6: Write a program that takes a number as input and outputs whether the number is even (is it divisible by two without a remainder).
 //
-//4 -> да
-//-3 -> нет
-//7 -> нет
+//4 -> yes
+//-3 -> no
+//7 -> no
 
-Console.WriteLine("Введите число для проверки на четность");
+Console.WriteLine("Enter a number to check for parity");
 int number = int.Parse(Console.ReadLine());
 
 if (number % 2 == 0)
 {
-    Console.WriteLine("Да");
+    Console.WriteLine("Yes");
 }
 else
 {
-    Console.WriteLine("Нет");
+    Console.WriteLine("No");
 }

@@ -1,9 +1,9 @@
-﻿//Напишите программу, которая на вход принимает одно число (N), а на выходе показывает все целые числа в промежутке от -N до N.
-//4 -> "-4, -3, -2, -1, 0, 1, 2, 3, 4" 2 -> " -2, -1, 0, 1, 2"
+﻿//Write a program that takes a single number (N) as input and outputs all integers between -N and N.
+//4 -> "-4, -3, -2, -1, 0, 1, 2, 3, 4" 2 -> "-2, -1, 0, 1, 2"
 
-Console.WriteLine("Напишите число");                 //Сообщение о вводе числа
-int num = int.Parse(Console.ReadLine());             //Ввод числа с клавиатуры
-for (var count = -num; count <= num; count++)        //Цикл счетчик = - числу, пока счетчик меньше или равен числу, счетчик +1
+Console.WriteLine("Enter number");                   //Number input message
+int num = int.Parse(Console.ReadLine());             //Entering a number from the keyboard
+for (var count = -num; count <= num; count++)        //Loop counter = - number, as long as counter is less than or equal to number, counter +1
 {
-        Console.WriteLine(count);                    //Вывести числа от -num до num
+        Console.WriteLine(count);                    //Print numbers from -num to num
 }

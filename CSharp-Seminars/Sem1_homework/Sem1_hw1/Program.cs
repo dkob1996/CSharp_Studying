@@ -1,17 +1,17 @@
-﻿//Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
+﻿//Task 2: Write a program that takes two numbers as input and outputs which number is greater and which is less.
 //
-//a = 5; b = 7 -> max = 7
+//a = 5; b=7 -> max=7
 //a = 2 b = 10 -> max = 10
 //a = -9 b = -3 -> max = -3
 
-Console.WriteLine("Напишите сначала число 'a', а затем число 'b'");
-int numberA = int.Parse(Console.ReadLine());      //Ввод первого числа с клавиатуры
-int numberB = int.Parse(Console.ReadLine());     //Ввод второго числа с клавиатуры
+Console.WriteLine("Write the number 'a' first and then the number 'b'");
+int numberA = int.Parse(Console.ReadLine());      //Entering the first number from the keyboard
+int numberB = int.Parse(Console.ReadLine());     //Entering the second number from the keyboard
 int max = 0;
 
 if (numberA == numberB)
 {
-    Console.WriteLine("Числа 'a' и 'b' одинаковы");
+    Console.WriteLine("The numbers 'a' and 'b' are the same");
 }
 else
 {

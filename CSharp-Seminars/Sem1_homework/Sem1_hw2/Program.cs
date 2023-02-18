@@ -1,10 +1,10 @@
-﻿//Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
+﻿//Task 4: Write a program that takes three numbers as input and outputs the maximum of these numbers.
 //
 //2, 3, 7 -> 7
 //44 5 78 -> 78
 //22 3 9 -> 22
 
-Console.WriteLine("Введите три числа для сравнения");
+Console.WriteLine("Enter three numbers to compare");
 int numberA = int.Parse(Console.ReadLine());
 int numberB = int.Parse(Console.ReadLine());
 int numberC = int.Parse(Console.ReadLine());
