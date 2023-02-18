@@ -1,5 +1,5 @@
-﻿//Задача 30: Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке.
-//[1,0,1,1,0,1,0,0]        
+﻿//Task 30: Write a program that outputs an array of 8 elements filled with zeros and ones in random order.
+//[1,0,1,1,0,1,0,0]    
 
 int[] array = RandomZeroOne(8);
 PrintArray(array);

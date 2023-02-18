@@ -1,7 +1,7 @@
-﻿//Задача 26: Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
+﻿//Task 26: Write a program that accepts a number as input and outputs the number of digits in the number.
 //456 -> 3 78 -> 2 89126 -> 5
 
-int number = EnterNumber("Введите число: ");
+int number = EnterNumber("Enter number: ");
 
 Console.WriteLine(CountDigitInNumber(number));
 

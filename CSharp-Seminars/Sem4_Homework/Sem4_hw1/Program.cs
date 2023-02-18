@@ -1,9 +1,9 @@
-﻿//Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+﻿//Task 25: Write a loop that takes two numbers (A and B) as input and raises the number A to the natural degree of B.
 //3, 5 -> 243 (3⁵)
 //2, 4 -> 16
 
-int number1 = EnterNumber("Введите число: ");
-int number2 = EnterNumber("Введите степень числа: ");
+int number1 = EnterNumber("Enter number: ");
+int number2 = EnterNumber("Enter degree of the number: ");
 
 Console.WriteLine(MultipleNumbers(number1, number2));
 

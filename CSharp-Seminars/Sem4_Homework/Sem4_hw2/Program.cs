@@ -1,9 +1,9 @@
-﻿//Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+﻿//Task 27: Write a program that accepts a number as input and outputs the sum of digits in the number.
 //452 -> 11
 //82 -> 10
 //9012 -> 12
 
-int number1 = EnterNumber("Введите число: ");
+int number1 = EnterNumber("Enter number: ");
 
 
 Console.WriteLine(GoToMassive(number1));

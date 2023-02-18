@@ -1,8 +1,8 @@
-﻿//Задача 28: Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
+﻿//Task 28: Write a program that takes the number N as input and outputs the product of numbers from 1 to N.
 //4->24 5->120
 
 
-int number = EnterNumber("Введите число: ");
+int number = EnterNumber("Enter number: ");
 
 Console.WriteLine(MultipleNumbers(number));
 
